@@ -11,11 +11,53 @@ body {
   color: #fff;
   background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple to Blue gradient */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   text-align: center;
   height: 100vh;
   background-attachment: fixed;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #004e92, #00c6ff); /* Dark Blue to Teal gradient */
+  color: white;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo h2 {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links li {
+  font-size: 1.1rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #feb47b; /* Light orange on hover */
 }
 
 /* App Container (Ensures content is centered) */
@@ -24,8 +66,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  padding-top: 100px; /* Added extra space for the navbar */
 }
 
 /* Header Section */
@@ -111,5 +153,9 @@ body {
 @media (max-width: 768px) {
   .content-section {
     flex-direction: column;
+  }
+
+  .navbar-links {
+    gap: 1rem;
   }
 }
